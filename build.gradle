@@ -1,0 +1,21 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'application'
+}
+group = 'me.yoooz'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'com.github.kittinunf.fuel:fuel:2.3.0'
+}
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+application {
+    mainClassName = 'MainKt'
+}
